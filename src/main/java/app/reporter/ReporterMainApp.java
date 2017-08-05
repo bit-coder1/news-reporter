@@ -1,3 +1,5 @@
+package app.reporter;
+
 public class ReporterMainApp {
 
   public static void main(String args[]) {
