@@ -1,9 +1,6 @@
 # news-reporter
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
-[![VersionEye](https://img.shields.io/versioneye/d/ruby/rails.svg)]()
-
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg)]()
 
 [![GitHub version](https://badge.fury.io/gh/bit-coder1%2Fnews-reporter.svg)](https://badge.fury.io/gh/bit-coder1%2Fnews-reporter)
 
