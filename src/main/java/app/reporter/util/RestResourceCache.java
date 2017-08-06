@@ -1,5 +1,6 @@
 package app.reporter.util;
 
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -43,10 +44,15 @@ public class RestResourceCache {
 			
 			// load resources keys cache
 			try {
-				List<ApiKey> restResourcesApiKeys = mapper.readValue(Thread.currentThread().getContextClassLoader().getResourceAsStream("rest-resources-keys.yaml"),new TypeReference<List<ApiKey>>(){});
-				restResourcesApiKeys.forEach(r -> System.out.println(r.getResourceId()+" - "+ ReflectionToStringBuilder.toString(r, ToStringStyle.MULTI_LINE_STYLE)));
-				restResourcesApiKeys.forEach(r -> restResourcesAPIKeys.put(r.getResourceId(),r));
-				//System.out.println(ReflectionToStringBuilder.toString(restResources, ToStringStyle.MULTI_LINE_STYLE));
+				InputStream apiKeysInputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("rest-resources-keys.yaml");
+				if(apiKeysInputStream != null) {
+					List<ApiKey> restResourcesApiKeys = mapper.readValue(apiKeysInputStream,new TypeReference<List<ApiKey>>(){});
+					restResourcesApiKeys.forEach(r -> System.out.println(r.getResourceId()+" - "+ ReflectionToStringBuilder.toString(r, ToStringStyle.MULTI_LINE_STYLE)));
+					restResourcesApiKeys.forEach(r -> restResourcesAPIKeys.put(r.getResourceId(),r));
+				}
+				else {
+					System.out.println("Api Keys file: rest-resources-keys.yaml was NOT found - make sure you have this placed in classpath");
+				}
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
