@@ -8,4 +8,6 @@
 
 [![Codacy coverage](https://img.shields.io/codacy/coverage/c44df2d9c89a4809896914fd1a40bedd.svg)]()
 
+[![Coverage Status](https://coveralls.io/repos/github/bit-coder1/news-reporter/badge.svg?branch=master)](https://coveralls.io/github/bit-coder1/news-reporter?branch=master)
+
 [![Build Status](https://travis-ci.org/bit-coder1/news-reporter.svg?branch=master)](https://travis-ci.org/bit-coder1/news-reporter)
