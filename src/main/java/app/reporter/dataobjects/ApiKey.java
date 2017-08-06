@@ -5,12 +5,11 @@ public class ApiKey {
 	private String resourceId;
 	private String apiKeyName;
 	private String apiKeyValue;
+	private KeyPassedByMethodEnum passedBy;
 
 	public enum KeyPassedByMethodEnum {
 		REQUEST_PARAM, HEADER
 	};
-
-	private KeyPassedByMethodEnum passedBy;
 
 	public String getResourceId() {
 		return resourceId;
