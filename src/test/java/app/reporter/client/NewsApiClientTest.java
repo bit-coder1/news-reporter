@@ -18,7 +18,7 @@ import app.reporter.util.RestResourceCache;
 
 public class NewsApiClientTest {
 
-	@Test
+	//@Test
 	public void testGetNewsFromSourceTechCrunch() {
 		String source = "techcrunch";
 		String resourceId = "news_api_rest_get";
@@ -35,7 +35,7 @@ public class NewsApiClientTest {
 
 	}
 
-	@Test
+	//@Test
 	public void testGetNewsFromSourceCNN() {
 		String source = "cnn";
 		String resourceId = "news_api_rest_get";
