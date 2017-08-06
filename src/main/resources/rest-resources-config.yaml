@@ -1,0 +1,14 @@
+# Rest Resources configuration
+---
+- 
+  resourceId: news_api_rest_get
+  name: NewsApiResourceGet
+  endpointUrl: https://newsapi.org/v1/articles
+-
+  resourceId: news_api_rest_post
+  name: NewsApiResourcePost
+  endpointUrl: https://newsapi.org/v1/article
+-
+  resourceId: news_api_get_sources
+  name: NewsApiSourcesGet
+  endpointUrl: https://newsapi.org/v1/sources
